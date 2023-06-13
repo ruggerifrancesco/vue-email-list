@@ -13,7 +13,7 @@ createApp({
                 .then((response) => {
                     const result = response.data;
                     console.log(result.response);
-                    this.emailList.push(result.response)
+                    this.emailList.push(result.response);
                 });
         },
         counterEmail() {
@@ -24,5 +24,6 @@ createApp({
     },
     created () {
         this.counterEmail();
+        console.log(this.emailList);
     }
 }).mount('#app')
