@@ -14,8 +14,8 @@
     
     <div id="app">
         <ul>
-            <li v-for="email in emailList">
-                {{ message }}
+            <li v-for="email in emailList" :key="email">
+                {{ email }}
             </li>
         </ul>
     </div>
