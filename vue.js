@@ -1,3 +1,4 @@
+import axios from 'axios'
 import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 
 createApp({
@@ -8,9 +9,15 @@ createApp({
         }
     },
     methods: {
-
+        randomGenEmail () {
+            axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+                .then(function (response) {
+                    const result = response.data;
+                    
+                });
+        }
     },
     created () {
-        
+
     }
 }).mount('#app')
