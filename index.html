@@ -10,7 +10,9 @@
     <script type="module" src="vue.js"></script>
     
     <div id="app">
-        {{ message }}
+        <ul>
+            <li v-for="email in emailList"></li>
+        </ul>
     </div>
 </body>
 </html>
