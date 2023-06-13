@@ -8,22 +8,20 @@ createApp({
         }
     },
     methods: {
-        randomGenEmail () {
+        randomEmail () {
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
                 .then(function (response) {
                     const result = response.data;
-                    return result.response;
+                    console.log(result.response);
                 });
         },
-        counterGenEmail() {
+        counterEmail() {
             for (let i = 0; i < 10; i++) {
-              const getEmail = this.randomGenEmail();
-              console.log(getEmail);
-              this.emailList.push(getEmail);
+              this.randomEmail();
             }
           }
     },
     created () {
-        this.counterGenEmail();
+        this.counterEmail();
     }
 }).mount('#app')
