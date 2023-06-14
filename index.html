@@ -14,7 +14,7 @@
     
     <div id="app">
         <h1>Lista E-mail Api</h1>
-        <ul>
+        <ul v-if="emailList.length >= 10">
             <li v-for="email in emailList" :key="email">
                 {{ email }}
             </li>
