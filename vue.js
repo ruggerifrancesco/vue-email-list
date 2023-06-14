@@ -16,14 +16,14 @@ createApp({
                     this.emailList.push(result.response);
                 });
         },
-        counterEmail() {
-            for (let i = 0; i < 10; i++) {
+        counterEmail(maxNumbers) {
+            for (let i = 0; i < maxNumbers; i++) {
               this.randomEmail();
             }
           }
     },
     created () {
-        this.counterEmail();
+        this.counterEmail(10);
         console.log(this.emailList);
     }
 }).mount('#app')
